@@ -16,25 +16,18 @@ public class Main {
             for (s2 = 0; no2 != 0; no2 = no2 / 10) {
                 s2 = s2 + no2 % 10;
             }
-            if (isEven(s + s2) == true) {
+            if (isEven(s + s2)) {
                 return "Este";
             } else return "Nu este";
-        } else if (no < 99 && no <= 9999 && no2 >= 99 && no2 <= 9999) {
-            return "Primul numar e prea mic";
-        } else if (no >= 99 && no > 9999 && no2 >= 99 && no2 <= 9999){
-            return "Primul numar e prea mare";
-        } else if (no >= 99 && no <= 9999 && no2 < 99 && no2 <= 9999){
-            return "Al doilea numar e prea mic";
-        } else if (no >= 99 && no <= 9999 && no2 >= 99 && no2 > 9999){
-            return "Al doilea numar e prea mare";
         }
-        else return "Nu bun";
+        else return "Eroare";
     }
     public static void main(String[] args) {
 	    Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         int n2 = scanner.nextInt();
         scanner.close();
+        System.out.println("Verify if sum of the digits of the 2 numbers is an even number");
         System.out.println(verify(n,n2));
     }
 }
