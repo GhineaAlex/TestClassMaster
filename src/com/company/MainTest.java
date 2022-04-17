@@ -28,6 +28,8 @@ public class MainTest {
     }
     @Test
     void graphEffect(){
-        
+        assertTrue(Main.verify(123, 1231).equals("Nu este"));
+        assertTrue(Main.verify(12, 123).equals("Eroare"));
+        assertTrue(Main.verify(1230, 123).equals("Este"));
     }
 }
