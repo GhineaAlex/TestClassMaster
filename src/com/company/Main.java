@@ -17,8 +17,8 @@ public class Main {
                 s2 = s2 + no2 % 10;
             }
             if (isEven(s + s2)) {
-                return "Este";
-            } else return "Nu este";
+                return "Par";
+            } else return "Impar";
         }
         else return "Eroare";
     }
